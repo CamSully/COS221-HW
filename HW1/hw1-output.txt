@@ -1,0 +1,9 @@
+Cameron Sullivan - COS 221 - HW1 Output
+
+
+Enter a string to be palindrome tested: Able was I ere I saw Elba
+'Able was I ere I saw Elba' is a palindrome.
+
+Enter a string to be palindrome tested: Boo hoo hoo
+'Boo hoo hoo' is not a palindrome.
+

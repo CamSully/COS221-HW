@@ -1,0 +1,4 @@
+Submission commands:
+
+Record program interaction: tee >(./palindromeTester) | tee -a hw1-output.txt
+zip: zip -r HW1.zip HW1
