@@ -20,7 +20,13 @@ int main() {
 	getline(cin, testString);
 
 	// Run the palindrome tester with the test string.
-	isPalindrome(testString);
+	if (isPalindrome(testString)) {	
+		cout << "'" << testString << "' is a palindrome." << endl;
+	}
+	else {
+		cout << "'" << testString << "' is not a palindrome." << endl;
+	}
+		
 
 	return 0;
 }
@@ -35,12 +41,10 @@ bool isPalindrome(const string& s) {
 	for (int low = 0; low < high; low++, high--) {
 		// If the two characters are not the same, the string is not a palindrome.
 		if (tolower(s[low]) != tolower(s[high])) {
-			cout << "'" << s << "' is not a palindrome." << endl;
-			return 0;
+			return false;
 		}
 	}
 	
 	// If all beginning and ending characters are the same, the string is a palindrome.
-	cout << "'" << s << "' is a palindrome." << endl;
-	return 1;
+	return true;
 }
