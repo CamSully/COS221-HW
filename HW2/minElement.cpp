@@ -1,6 +1,6 @@
-/* COS 221 - Cameron Sullivan - HW2 - 9-19-17
+/* COS 221 - Cameron Sullivan - HW2 - 9-20-17
 * Minimum Element: This program iterates through an array and finds the smallest element in the array.
-* Pointers are used in the minElement function to ensure understanding of arrays and pointers.
+* Pointers are used in the minElement() function to ensure understanding of arrays and pointers.
 */ 
 
 #include <iostream>
@@ -11,12 +11,13 @@ int minElement(int [], int);
 
 int main(void) {
 	
-	cout << "COS 221 - Cameron Sullivan - HW2 Output - 9-19-17" << endl;
+	cout << "COS 221 - Cameron Sullivan - HW2 Output - 9-20-17" << endl;
 
 	// Initialize the test array.	
 	int testNums[] = {1,2,4,5,10,100,2,-22};
 
 	// Calculate the size of the array so that it doesn't need to be manually changed for different arrays.
+	// Source: https://stackoverflow.com/questions/4108313/how-do-i-find-the-length-of-an-array, user: Prasoon Saurav
 	int size  = sizeof(testNums) / sizeof(testNums[0]);
 
 	// Run the minElement function to find the smallest value in the array.

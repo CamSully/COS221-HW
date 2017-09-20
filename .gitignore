@@ -1,3 +1,7 @@
 *.docx
+*.docx#
 submission-conf.txt
 *.zip
+zips/
+9-15/
+*.png
