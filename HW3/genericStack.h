@@ -2,6 +2,9 @@
 *
 */
 
+#include <vector>
+using namespace std;
+
 template<typename T>
 class Stack 
 {
@@ -10,43 +13,42 @@ public:
 	bool empty() const;
 	T peek() const;
 	void push(T value);
-	T pop();
+	void pop();
 	int getSize() const;
 
 private:
-	T elements [100];
+	vector<T> elements;
 	int size;
 };
 
 template<typename T>
 Stack<T>::Stack() {
-	size = 0;
 }
 
 template<typename T>
 bool Stack<T>::empty() const {
-	return size == 0;
+	return (elements.size() == 0);
 }
 
 
 template<typename T>
 T Stack<T>::peek() const {
-	return elements[size - 1];
+	return elements.at(elements.size() - 1);
 }
 
 template<typename T>
 void Stack<T>::push(T value) {
-	elements[size++] = value;
+	elements.push_back(value);
 }
 
 
 template<typename T>
-T Stack<T>::pop() {
-	return elements[--size];
+void Stack<T>::pop() {
+	elements.pop_back();
 }
 
 
 template<typename T>
 int Stack<T>::getSize() const {
-	return size;
+	return elements.size();
 }
