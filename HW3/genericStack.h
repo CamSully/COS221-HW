@@ -39,20 +39,8 @@ bool Stack<T>::empty() const {
 
 // peek() - Returns the element on the top of the stack.
 template<typename T>
-T Stack<T>::peek() const {
-	try {
-		
-		if (getSize() != 0) {	
-			return elements.at(elements.size() - 1);
-		}
-		else {
-			throw runtime_error("Cannot peek when the stack is empty!");
-		}
-	}
-	catch (runtime_error& e) {
-		cout << e.what() << endl;
-		return NULL;
-	}
+T Stack<T>::peek() const {	
+	return elements.at(elements.size() - 1);
 }
 
 // push() - Adds a new element on the top of the stack.
