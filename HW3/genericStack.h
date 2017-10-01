@@ -17,7 +17,7 @@ public:
 	bool empty() const;
 	T peek() const;
 	void push(T value);
-	void pop();
+	T pop();
 	int getSize() const;
 
 private:
@@ -34,7 +34,7 @@ Stack<T>::Stack() {
 // empty() - Returns 1 if the stack is empty, 0 if the stack contains elements.
 template<typename T>
 bool Stack<T>::empty() const {
-		return (elements.size() == 0);
+	return (elements.size() == 0);
 }
 
 // peek() - Returns the element on the top of the stack.
@@ -49,10 +49,12 @@ void Stack<T>::push(T value) {
 	elements.push_back(value);
 }
 
-// pop() - Pops the top element off the stack.
+// pop() - removes the top element from the stack (returns top element).
 template<typename T>
-void Stack<T>::pop() {
-	elements.pop_back();
+T Stack<T>::pop() {
+	T element = elements.at(elements.size() - 1);
+ 	elements.pop_back();
+	return element;
 }
 
 // getSize() - returns the number of elements in the stack.
