@@ -1,5 +1,5 @@
 all:
-	g++ genericStack-tester.cpp -o genericStack
+	g++ MyPoint.cpp ThreeDPoint.cpp pointTester.cpp -o threeDPoint
 
 clean:
-	$(RM) genericStack
+	$(RM) threeDPoint
