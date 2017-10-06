@@ -7,16 +7,10 @@ void printThreeDPoint(ThreeDPoint);
 
 int main() {
 
-/*	MyPoint point1(0,0);
-*	MyPoint point2(10,30.5);
-*
-*	cout << "point1- x: " << point1.getX() << "   y: " << point1.getY() << endl;
-*	cout << "point2- x: " << point2.getX() << "   y: " << point2.getY() << endl;
-*
-*	cout << "Distance between: " << point1.distance(point2) << endl;
-*/
+	cout << "COS 221 - Cameron Sullivan - HW4 Output" << endl;
 
-	ThreeDPoint tdPoint1(0, 0, 0);
+	// Create two 3D points.
+	ThreeDPoint tdPoint1;
 	ThreeDPoint tdPoint2(10, 30, 25.5);
 
 	cout << "point1: ";
@@ -24,11 +18,13 @@ int main() {
 	cout << "point2: ";
 	printThreeDPoint(tdPoint2);
 
+	// Calculate and print the distance between the two points.
 	cout << "Distance between point1 and point2: " << tdPoint1.distance(tdPoint2) << endl;
 
 	return 0;
 }
 
+// Print the coordinates of a point.
 void printThreeDPoint(ThreeDPoint point) {
 	cout << "(" << point.getX() << ", " << point.getY() << ", " << point.getZ() << ")" << endl;
 }

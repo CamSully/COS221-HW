@@ -1,3 +1,8 @@
+/* COS 221 - Cameron Sullivan - HW4
+* MyPoint Class: create an object that represents a point in 2D space.
+* Includes a function to calculate the distance between two 2D points.
+*/
+
 #include <iostream>
 #include "MyPoint.h"	// MyPoint declarations.
 #include <cmath>	// For square root.
