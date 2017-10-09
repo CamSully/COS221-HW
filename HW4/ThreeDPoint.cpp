@@ -9,16 +9,14 @@
 using namespace std;
 
 // No-arg constructor: create a point at the origin.
+// Note that this constructor automatically calls MyPoint's no-arg constructor, so I don't have to initialize x and y.
 ThreeDPoint::ThreeDPoint() {
-	x = 0;
-	y = 0;
 	z = 0;
 }
 
-// 3-arg constructor: create a point at the specified coordinates.
-ThreeDPoint::ThreeDPoint(double xCoord, double yCoord, double zCoord) {
-	x = xCoord;
-	y = yCoord;
+// 3-arg constructor: create a point at the specified coordinates. 
+// Note that this constructor inherits the two-arg constructor from MyPoint, so I can just pass xCoord and yCoord to the MyPoint constructor.
+ThreeDPoint::ThreeDPoint(double xCoord, double yCoord, double zCoord) : MyPoint(xCoord, yCoord) {
 	z = zCoord;
 }
 

@@ -10,8 +10,11 @@
 
 // ThreeDPoint extends MyPoint.
 class ThreeDPoint: public MyPoint {
+// Make the member variable private to prevent user edits.
+private:
+	double z;	
+
 public:
-	double z;
 
 	ThreeDPoint();
 

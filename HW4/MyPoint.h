@@ -7,9 +7,12 @@
 #define MyPoint_H
 
 class MyPoint {
-public:
+// Make member variables public to the subclass, but private to everything else.
+protected:
 	double x;
 	double y;
+
+public:
 
 	MyPoint();
 
