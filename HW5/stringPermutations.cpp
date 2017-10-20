@@ -29,7 +29,7 @@ int main() {
 }
 
 
-// Worker function: this function does the actual work on the strings and prints all the permutaions.
+// Worker function: this function does the work on the strings and prints all the permutaions.
 void displayPermutation(const string& s1, const string& s2) {
 
 	// If the permutation is ready (all chars in s1), print the permutation (s1).
@@ -62,4 +62,5 @@ void displayPermutation(const string& s1, const string& s2) {
 void displayPermutation(const string& s) {
 	// Call the real displayPermutation function with an empty s1 and a full s2.
 	displayPermutation("",s);
+
 }
