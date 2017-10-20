@@ -1,8 +1,5 @@
-*.docx
-*.docx#
-submission-conf.txt
-*.zip
-zips/
-class-resources/
-*.png
-*.odt
+*
+!*.cpp
+!*.h
+!Makefile
+!info.txt
