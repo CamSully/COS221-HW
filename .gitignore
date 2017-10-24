@@ -1,5 +1,8 @@
+# Only include cpps, headers, makefiles in the homework directories.
+
 *
 !*.cpp
 !*.h
 !Makefile
 !info.txt
+!HW*/
