@@ -1,3 +1,5 @@
+// Singly-linked list.
+
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 #include <stdexcept>
@@ -293,5 +295,19 @@ T LinkedList<T>::removeAt(int index)
 // The functions remove(T element), lastIndexOf(T element),
 // contains(T element), and set(int index, T element) are
 // left as an exercise
+
+template<typename T>
+void LinkedList<T>::remove(T element) {
+	if (indexOf(element) == -1) {
+		return;
+	}
+
+	int index = indexOf(element);
+	
+	while (index != -1) {
+		removeAt(index);
+		index = indexOf(element);
+	}
+}
 
 #endif
