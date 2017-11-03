@@ -1,4 +1,8 @@
-// Singly-linked list.
+/* Singly-linked list.
+* Originally written by D. Liang, Introduction to Programming with C++, 3rd edition.
+* Modified by Cameron Sullivan
+* Added the remove() function to remove elements from the linked list.
+*/
 
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
@@ -296,14 +300,18 @@ T LinkedList<T>::removeAt(int index)
 // contains(T element), and set(int index, T element) are
 // left as an exercise
 
+// remove(): Remove all instances of an element in the linked list.
 template<typename T>
 void LinkedList<T>::remove(T element) {
+	// If the element is not in the list, end execution.
 	if (indexOf(element) == -1) {
 		return;
 	}
 
+	// Find the index of the first instance of the element.
 	int index = indexOf(element);
 	
+	// While the element is still in the linked list, remove it and find the next index.
 	while (index != -1) {
 		removeAt(index);
 		index = indexOf(element);
