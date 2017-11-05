@@ -303,11 +303,7 @@ T LinkedList<T>::removeAt(int index)
 // remove(): Remove all instances of an element in the linked list.
 template<typename T>
 void LinkedList<T>::remove(T element) {
-	// If the element is not in the list, end execution.
-	if (indexOf(element) == -1) {
-		return;
-	}
-
+	
 	// Find the index of the first instance of the element.
 	int index = indexOf(element);
 	

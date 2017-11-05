@@ -3,6 +3,12 @@ General Requirements:
 -Executable
 -PNG of output
 
+Comment at top of code:
+/* filename.cpp
+* Author: Cameron Sullivan
+* Date: 
+*/
+
 Submission commands:
 Record program interaction: tee >(./palindromeTester) | tee -a hw1-output.txt
 zip: zip -r HW1.zip HW1
