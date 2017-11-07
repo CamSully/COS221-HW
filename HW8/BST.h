@@ -1,3 +1,9 @@
+/* Binary search tree
+* Originally written by D. Liang, Introduction to Programming with C++, 3rd edition.
+* Modified by Cameron Sullivan
+* Added the two height functions to obtain the height of a BST.
+*/
+
 #ifndef BST_H
 #define BST_H
 
@@ -393,22 +399,26 @@ bool BST<T>::remove(T element)
 	return true; // Element inserted
 }
 
+// User height(): provides a simple function for the user to call.
+// Calls the worker function.
 template <typename T>
 int BST<T>::height() {
-	if (root == NULL) {
-		return 0;
-	}
 	height(root);
 }
 
+// Worker height(): recursively calculates the height of a BST.
 template <typename T>
 int BST<T>::height(TreeNode<T>* node) {
+	// If the node is a leaf, its height is 0.
 	if (node == NULL) {
 		return 0;
 	}
+
+	// Calculate the height of each subtree.
 	int leftHeight = height(node->left) + 1;
 	int rightHeight = height(node->right) + 1;
 
+	// Compare the left and right heights to return the greatest height.
 	if (leftHeight > rightHeight) {
 		return leftHeight;
 	}

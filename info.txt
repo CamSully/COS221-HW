@@ -3,6 +3,8 @@ General Requirements:
 -Executable
 -PNG of output
 
+Cite outside code!
+
 Comment at top of code:
 /* filename.cpp
 * Author: Cameron Sullivan

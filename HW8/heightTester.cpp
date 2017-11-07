@@ -1,18 +1,21 @@
 /* heightTester.cpp
 * Author: Cameron Sullivan
 * Date: 11-5-17
+* 
+* This code tests the functionality of the height() function in BST.h.
 */
 
 #include <iostream>
 #include "BST.h"
 using namespace std;
 
-// Prototypes.
+// Prototype.
 void parseString(string, BST<string>&);
 
 
 int main() {
 	
+	// Create a binary search tree.
 	BST<string> tree;
 
 	cout << "Cameron Sullivan - COS 221 - HW7 Output" << endl << endl;
@@ -22,9 +25,11 @@ int main() {
 	// Parse the string to remove punctuation and load words into the tree.
 	cout << "Original sentence: " << endl << sentence << endl << endl;
 	parseString(sentence, tree);
-        cout << "BST Height: " << tree.height() << endl << endl;
+        cout << "The strings have been loaded into a binary search tree." << endl;
+	cout << "BST Height: " << tree.height() << endl << endl;
 
-	cout << "BST sentence: " << endl;
+	// Print the tree using inorder traversal.
+	cout << "BST sentence (inorder traversal): " << endl;
 	tree.inorder();
 	cout << endl;
 
@@ -33,7 +38,7 @@ int main() {
 
 
 
-// parseString(): take a sentence as input, remove punctuation, split into individual words.
+// parseString(): take a sentence as input, remove punctuation, split into individual words, load into the BST.
 void parseString(string sentence, BST<string>& tree) {
 	int startIndex = 0;
 	int numChars = 0;
@@ -66,14 +71,14 @@ void parseString(string sentence, BST<string>& tree) {
 		else {
 			// Get the word: substring starting at startIndex, with numChars number of chars.
 			word = sentence.substr(startIndex, numChars);
-			// Add the word on the end of the tree.
+			// Insert the word into the BST.
 			tree.insert(word);
 			// Reset values for the next word.
 			firstLetter = true;
 			numChars = 0;
 		}
 	}
-	// After the for-loop, add the last word to the tree. 
+	// After the for-loop, insert the last word into the tree. 
 	word = sentence.substr(startIndex, numChars);
 	tree.insert(word);
 }
