@@ -6,6 +6,7 @@
 */
 
 #include <iostream>
+#include <string>
 #include "BST.h"
 using namespace std;
 

@@ -403,7 +403,7 @@ bool BST<T>::remove(T element)
 // Calls the worker function.
 template <typename T>
 int BST<T>::height() {
-	height(root);
+	return height(root);
 }
 
 // Worker height(): recursively calculates the height of a BST.
