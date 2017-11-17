@@ -19,7 +19,7 @@ int main() {
 	// Create a binary search tree.
 	BST<string> tree;
 
-	cout << "Cameron Sullivan - COS 221 - HW7 Output" << endl << endl;
+	cout << "Cameron Sullivan - COS 221 - HW8 Output" << endl << endl;
 	
 	const string sentence = "DURING the whole of a dull, dark, and soundless day in the autumn of the year, when the clouds hung oppressively low in the heavens, I had been passing alone, on horseback, through a singularly dreary tract of country; and at length found myself, as the shades of the evening drew on, within view of the melancholy House of Usher.";
 
