@@ -6,6 +6,8 @@
 #include <queue> // For implementing BFS
 #include <stdexcept>
 #include <sstream> // For converting a number to a string
+#include <algorithm> // For the find() function.
+
 using namespace std;
 template<typename V>
 class Graph
@@ -23,7 +25,7 @@ Graph(int numberOfVertices, int edges[][2], int numberOfEdges);
 Graph(vector<V>& vertices, vector<Edge>& edges);
 // Construct a graph with vertices 0, 1, ..., n-1 and
 // edges in a vector
-Graph(int numberOfVertices, vector<Edge>& edges);34
+Graph(int numberOfVertices, vector<Edge>& edges);
 // Return the number of vertices in the graph
 int getSize() const;
 // Return the degree for a specified vertex
@@ -166,7 +168,7 @@ void Graph<V>::printEdges() const
 {
 for (unsigned u = 0; u < neighbors.size(); u++)
 {
-cout << "Vertex " << getVertex(u) << "(" << u << "): ";213
+cout << "Vertex " << getVertex(u) << "(" << u << "): ";
 for (Edge* e: neighbors[u])
 {
 cout << "(" << getVertex(e->u) << ", " << getVertex(e->v) <<
@@ -175,6 +177,7 @@ cout << "(" << getVertex(e->u) << ", " << getVertex(e->v) <<
 cout << endl;
 }
 }
+
 template<typename V>
 void Graph<V>::printAdjacencyMatrix() const
 {
@@ -272,8 +275,7 @@ isVisited[i] = false;
 // Recursively search
 dfs(u, parent, searchOrders, isVisited);
 // Return a search tree332
-return Tree(u, parent, searchOrders);
-}
+return Tree(u, parent, searchOrders);}
 template<typename V>
 void Graph<V>::dfs(int u, vector<int>& parent,
 vector<int>& searchOrders, vector<bool>& isVisited) const
@@ -286,14 +288,14 @@ for (Edge* e: neighbors[u])
 if (!isVisited[e->v])
 {
 parent[e->v] = u; // The parent of vertex i is v
-dfs(e->v, parent, searchOrders, isVisited); // Recursive
-search
+dfs(e->v, parent, searchOrders, isVisited); // Recursive search
 }
 }
 }
 template<typename V>
 Tree Graph<V>::bfs(int v) const
 {
+
 vector<int> searchOrders;
 vector<int> parent(vertices.size());
 for (int i = 0; i < getSize(); i++)

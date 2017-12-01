@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
 	string vertices[] = {};
-	int edges[][] = {};
+//	int edges[][] = {};
 
 	return 0;
 }

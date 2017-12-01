@@ -1,4 +1,4 @@
 all:
-	g++ shortestPath.cpp -o shortestPath
+	g++ -std=c++11 shortestPath.cpp -o shortestPath
 clean:
 	$(RM) shortestPath
