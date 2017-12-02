@@ -1,3 +1,9 @@
+/* Graph class header. Creates a graph that can be searched and made into a tree. 
+* Originally written by D. Liang, Introduction to Programming with C++, 3rd edition.
+* Modified by Cameron Sullivan
+* Added the include for algorithm.h, small fixes.
+*/
+
 #ifndef GRAPH_H
 #define GRAPH_H
 #include "Edge.h" // Defined in Listing 24.1
