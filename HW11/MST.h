@@ -11,8 +11,7 @@ public:
 	}
 	// Construct a tree with root, parent, searchOrders,
 	// and total weight
-	MST(int root, vector<int>& parent, vector<int>& searchOrders,
-	double totalWeight) : Tree(root, parent, searchOrders)
+	MST(int root, vector<int>& parent, vector<int>& searchOrders, double totalWeight) : Tree(root, parent, searchOrders)
 	{
 		this->totalWeight = totalWeight;
 	}
